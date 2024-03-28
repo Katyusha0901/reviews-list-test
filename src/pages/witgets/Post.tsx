@@ -11,7 +11,7 @@ export const Post: React.FC<Props> = ({ commentInformation }) => {
         {commentInformation.id}.{commentInformation.name}
       </div>
       <div className="post__text">{commentInformation.body}</div>
-      <ButtonToRead />
+      <ButtonToRead commentInformation={commentInformation} />
     </div>
   );
 };

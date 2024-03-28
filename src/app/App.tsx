@@ -6,12 +6,6 @@ import { MainPage } from "../pages/MainPage";
 import { CommentPage } from "../pages/CommentPage";
 
 export default function App() {
-  fetch("./data/comments.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const allComments: Comment[] = data;
-    });
-
   return (
     <>
       <Routes>

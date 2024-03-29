@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { RoutesObject } from "../../app/RoutesObject";
 import { Comment } from "../../app/types";
 
 interface Props {

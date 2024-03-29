@@ -1,3 +1,10 @@
+import { Link } from "react-router-dom";
+import { RoutesObject } from "../../app/RoutesObject";
+
 export function ButtonBack() {
-  return <div className="button-back"></div>;
+  return (
+    <Link to={RoutesObject.mainPage}>
+      <div className="button-back">Home</div>
+    </Link>
+  );
 }

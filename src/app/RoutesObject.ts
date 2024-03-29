@@ -4,6 +4,6 @@ interface RoutesType {
 }
 
 export const RoutesObject: RoutesType = {
-  mainPage: "/reviews-list-test",
-  commentPage: "/reviews-list-test/product/:productId",
+  mainPage: "/",
+  commentPage: "/comment/:commentId",
 };

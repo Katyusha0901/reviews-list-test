@@ -7,7 +7,7 @@ interface Props {
 
 export const ButtonToRead: React.FC<Props> = ({ commentInformation }) => {
   return (
-    <Link to={`/comment/${commentInformation.id}`}>
+    <Link to={`/reviews-list-test/comment/${commentInformation.id}`}>
       <div className="button-to-read">Read more</div>
     </Link>
   );

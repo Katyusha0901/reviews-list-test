@@ -1,5 +1,7 @@
 import { Comment } from "../../app/types";
 import { ButtonToRead } from "../features/Button-to-read";
+import "../../app/styles/Post.css";
+
 interface Props {
   commentInformation: Comment;
 }

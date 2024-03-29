@@ -1,0 +1,19 @@
+.post {
+  border: 2px solid;
+  padding: 30px;
+  margin: 10px;
+}
+
+.post__title {
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.post__text {
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+}

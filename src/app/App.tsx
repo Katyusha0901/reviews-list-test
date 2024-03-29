@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Comment } from "./types";
 import { RoutesObject } from "./RoutesObject";
 import { MainPage } from "../pages/MainPage";
 import { CommentPage } from "../pages/CommentPage";

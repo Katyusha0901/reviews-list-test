@@ -14,7 +14,7 @@ export function MainPage() {
       });
     })
     .catch((err) => console.log("Ошибка", err));
-  console.log(allComments);
+
   return (
     <List data={allComments} height={800} itemHeight={100} itemKey="id">
       {(comment) => <Post commentInformation={comment} />}

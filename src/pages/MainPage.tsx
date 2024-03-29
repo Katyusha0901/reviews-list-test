@@ -4,6 +4,7 @@ import { Post } from "./witgets/Post";
 import List from "rc-virtual-list";
 
 export let allComments: Comment[] = [];
+
 export function MainPage() {
   fetch("./data/comments.json")
     .then((response) => response.json())
@@ -13,12 +14,10 @@ export function MainPage() {
       });
     })
     .catch((err) => console.log("Ошибка", err));
-  console.log(allComments);
-  const booksJSX = (
-    <List data={allComments} height={3100} itemHeight={100} itemKey="id">
+
+  return (
+    <List data={allComments} height={800} itemHeight={100} itemKey="id">
       {(comment) => <Post commentInformation={comment} />}
     </List>
   );
-
-  return <div>{booksJSX}</div>;
 }

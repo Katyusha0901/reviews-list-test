@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { Comment } from "../app/types";
 import { ButtonBack } from "./features/Button-back";
 import { allComments } from "./MainPage";
 

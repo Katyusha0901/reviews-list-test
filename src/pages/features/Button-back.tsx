@@ -4,7 +4,7 @@ import { RoutesObject } from "../../app/RoutesObject";
 export function ButtonBack() {
   return (
     <Link to={RoutesObject.mainPage}>
-      <div className="button-back">Home</div>
+      <div className="button-back">Назад</div>
     </Link>
   );
 }

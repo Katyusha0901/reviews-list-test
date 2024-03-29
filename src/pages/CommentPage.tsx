@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { ButtonBack } from "./features/Button-back";
 import { allComments } from "./MainPage";
+import "../app/styles/CommentPage.css";
 
 export function CommentPage() {
   const { commentId } = useParams<string>();

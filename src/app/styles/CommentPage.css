@@ -1,0 +1,23 @@
+.comment-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.comment-page__title {
+  margin: 10px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.comment-page__text {
+  margin-bottom: 10px;
+}
+
+.comment-page__email {
+  font-size: large;
+  font-weight: 700;
+  margin-bottom: 10px;
+}

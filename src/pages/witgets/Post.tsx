@@ -1,14 +1,15 @@
 import { Comment } from "../../app/types";
 import { ButtonToRead } from "../features/Button-to-read";
 import "../../app/styles/Post.css";
+import { forwardRef } from "react";
 
 interface Props {
   commentInformation: Comment;
 }
 
-export const Post: React.FC<Props> = ({ commentInformation }) => {
+export const Post = forwardRef<HTMLDivElement, Props>(({ commentInformation }, ref) => {
   return (
-    <div className="post">
+    <div className="post" ref={ref}>
       <div className="post__title">
         {commentInformation.id}.{commentInformation.name}
       </div>
@@ -16,4 +17,4 @@ export const Post: React.FC<Props> = ({ commentInformation }) => {
       <ButtonToRead commentInformation={commentInformation} />
     </div>
   );
-};
+})

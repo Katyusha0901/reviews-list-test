@@ -9,7 +9,7 @@ interface Props {
 
 export const MainPage: React.FC<Props> = ({ comments }) => {
   return (
-    <List data={comments} height={800} itemHeight={100} itemKey="id">
+    <List data={comments} height={720} itemHeight={140.8} itemKey="id">
       {(comment) => <Post commentInformation={comment} />}
     </List>
   );

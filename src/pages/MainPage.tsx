@@ -25,7 +25,7 @@ export const MainPage: React.FC<Props> = ({
     );
 
     const lengthOfVisibleAndRemainingList: number =
-      visibleComments.length * 141 - virtualScroll.y;
+      visibleComments.length * 141 - virtualScroll.y - window.innerHeight;
 
     if (lengthOfVisibleAndRemainingList < 1000) {
       let ref: boolean = false;

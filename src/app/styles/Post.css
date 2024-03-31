@@ -1,14 +1,21 @@
 .post {
-  border: 2px solid;
-  padding: 30px;
-  margin: 10px;
   width: 50vw;
+  height: 141px;
+}
+
+.post__content {
+  padding: 30px;
+  border: 1px solid;
 }
 
 .post__title {
   margin-bottom: 10px;
   font-size: large;
   font-weight: 700;
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post__text {
@@ -16,5 +23,5 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 250px;
+  width: 40vw;
 }

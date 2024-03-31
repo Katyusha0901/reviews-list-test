@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { ButtonBack } from "./features/Button-back";
-import { useEffect, useState } from "react";
 import { Comment } from "../app/types";
 import "../app/styles/CommentPage.css";
 

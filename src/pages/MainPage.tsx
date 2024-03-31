@@ -10,6 +10,7 @@ interface Props {
 }
 
 const windowHeight: number = window.innerHeight - 25;
+console.log(windowHeight);
 let isChangedVisibleComments: boolean = false;
 
 export const MainPage: React.FC<Props> = ({
@@ -21,18 +22,17 @@ export const MainPage: React.FC<Props> = ({
     if (visibleComments.length === comments.length) {
       return;
     }
+
     const additionalComments = comments.slice(
       visibleComments.length,
       visibleComments.length + 50
     );
-
-    const lengthOfVisibleAndRemainingList: number =
+    const lengthOfRemainingList: number =
       visibleComments.length * 141 - virtualScroll.y - windowHeight;
 
-    if (lengthOfVisibleAndRemainingList < 1000) {
+    if (lengthOfRemainingList < 1000) {
       if (!isChangedVisibleComments) {
         setVisibleComments([...visibleComments, ...additionalComments]);
-        isChangedVisibleComments = true;
       }
     }
   }

@@ -6,10 +6,6 @@ Available at https://katyusha0901.github.io/reviews-list-test/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Built With
-
-[Bootstrap](https://getbootstrap.com/) - open source front-end development framework for the creation of websites and web apps.
-
 ### Prerequisites
 
 You need to have Node.js installed on your machine

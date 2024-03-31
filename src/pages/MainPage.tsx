@@ -10,7 +10,6 @@ interface Props {
 }
 
 const windowHeight: number = window.innerHeight - 25;
-console.log(windowHeight);
 let isChangedVisibleComments: boolean = false;
 
 export const MainPage: React.FC<Props> = ({

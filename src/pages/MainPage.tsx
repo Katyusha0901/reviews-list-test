@@ -9,12 +9,14 @@ interface Props {
   setVisibleComments: (value: React.SetStateAction<Comment[]>) => void;
 }
 
+const windowHeight: number = window.innerHeight - 25;
+let isChangedVisibleComments: boolean = false;
+
 export const MainPage: React.FC<Props> = ({
   comments,
   visibleComments,
   setVisibleComments,
 }) => {
-  const ref = window.innerHeight - 25;
   function onScroll(virtualScroll: { x: number; y: number }) {
     if (visibleComments.length === comments.length) {
       return;
@@ -25,20 +27,19 @@ export const MainPage: React.FC<Props> = ({
     );
 
     const lengthOfVisibleAndRemainingList: number =
-      visibleComments.length * 141 - virtualScroll.y - window.innerHeight;
+      visibleComments.length * 141 - virtualScroll.y - windowHeight;
 
     if (lengthOfVisibleAndRemainingList < 1000) {
-      let ref: boolean = false;
-      if (ref === false) {
+      if (!isChangedVisibleComments) {
         setVisibleComments([...visibleComments, ...additionalComments]);
-        ref = true;
+        isChangedVisibleComments = true;
       }
     }
   }
   return (
     <List
       data={visibleComments}
-      height={ref}
+      height={windowHeight}
       itemHeight={141}
       itemKey="id"
       onVirtualScroll={onScroll}
